@@ -141,6 +141,18 @@ fun ProductDetailScreen(
 }
 
 @Composable
+fun ProductImage(
+    productTitle: String,
+    modifier: Modifier = Modifier
+) {
+    Image(
+        painter = painterResource(id = android.R.drawable.ic_menu_gallery),
+        contentDescription = "Image du produit $productTitle",
+        modifier = modifier
+    )
+}
+
+@Composable
 fun ProductHeader(
     title: String,
     brand: String,
@@ -183,18 +195,6 @@ fun ProductPriceCard(
             )
         }
     }
-}
-
-@Composable
-fun ProductImage(
-    productTitle: String,
-    modifier: Modifier = Modifier
-) {
-    Image(
-        painter = painterResource(id = android.R.drawable.ic_menu_gallery),
-        contentDescription = "Image du produit $productTitle",
-        modifier = modifier
-    )
 }
 
 @Composable
